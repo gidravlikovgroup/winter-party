@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Зимний корпоратив • 13.12.2025 — Приглашение</title>
+  <meta name="description" content="Приглашаем на зимний корпоратив 13 декабря 2025. Программа, место, регистрация и важная информация на одной странице." />
+  <meta property="og:title" content="Зимний корпоратив • 13.12.2025 — Приглашение" />
+  <meta property="og:description" content="Встречаемся в парк-отеле «Яхрома». Зарегистрируйтесь до 1 ноября — мест ограниченное число. Отмечаем 15 лет компании!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1608889175134-b2bf1d674b1f?q=80&w=1600&auto=format&fit=crop" />
+  <meta name="theme-color" content="#000000" />
+  <style>
+    :root{
+      --bg:#000; --card:rgba(255,255,255,.06); --glass:rgba(255,255,255,.08);
+      --text:#fff; --muted:#c9c9c9; --accent:#c51517; --ok:#a6f7cf;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:"Franklin Gothic Medium","Franklin Gothic","ITC Franklin Gothic","Arial Narrow",Arial,system-ui,-apple-system,Segoe UI,Roboto,Inter,sans-serif;
+      background:
+        radial-gradient(1200px 600px at 80% -10%, #0b0b0b 0, transparent 60%),
+        radial-gradient(900px 500px at 0% 10%, #111 0, transparent 60%),
+        var(--bg);
+      color:var(--text); line-height:1.5; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
+    .container{max-width:1000px; margin:0 auto; padding:24px;}
+    header{
+      position:relative; border-radius:24px; overflow:hidden; padding:56px 24px; margin-top:24px; backdrop-filter: blur(8px);
+      background:linear-gradient(160deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+      outline:1px solid rgba(255,255,255,.08); box-shadow:0 10px 30px rgba(0,0,0,.5); text-align:center;
+    }
+    .logo{display:inline-flex; align-items:center; justify-content:center; margin:0 auto 10px; height:40px}
+    .logo img{height:40px; width:auto; filter: drop-shadow(0 2px 8px rgba(0,0,0,.5))}
+    .badge{display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.06); font-size:12px}
+    .badge b{color:var(--accent)}
+    h1{font-size:clamp(28px,5vw,56px); margin:10px 0 10px; line-height:1.1}
+    .pill{display:inline-block; padding:8px 12px; border-radius:999px; font-weight:700}
+    .pill-date{background:rgba(197,21,23,.15); border:1px solid var(--accent); letter-spacing:.02em; margin-top:12px}
+    .cta{margin-top:36px; display:flex; flex-wrap:wrap; gap:12px; justify-content:center}
+    header .note{margin-top:32px !important;}
+    .btn{appearance:none; border:none; cursor:pointer; padding:14px 18px; border-radius:14px; font-weight:700; background:var(--accent); color:#fff; box-shadow:0 6px 16px rgba(197,21,23,.45); transition:.2s transform,.2s box-shadow; text-decoration:none; display:inline-flex; align-items:center; gap:10px}
+    .btn:hover{transform:translateY(-1px); box-shadow:0 10px 24px rgba(197,21,23,.6)}
+
+    /* нижняя кнопка: отступы сверху/снизу */
+    .cta-bottom{margin-top:40px; margin-bottom:40px}
+
+    /* === MAGIC BENTO (для карточек) =================================== */
+    .bento{position:relative; border-radius:20px; isolation:isolate}
+    .bento::before{
+      content:""; position:absolute; inset:-1px; border-radius:inherit; padding:1px;
+      background:
+        radial-gradient(160px 160px at var(--glow-x,50%) var(--glow-y,50%), rgba(197,21,23,.35), rgba(197,21,23,0) 60%),
+        conic-gradient(from 0deg, rgba(255,255,255,.65), rgba(255,255,255,.2) 18%, rgba(197,21,23,.7) 36%, rgba(255,255,255,.2) 54%, rgba(197,21,23,.7) 72%, rgba(255,255,255,.65) 100%);
+      -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite:xor; mask-composite:exclude;
+      opacity:var(--glow-intensity,0); transition:opacity .25s ease; pointer-events:none; filter:blur(.3px); will-change:opacity;
+    }
+    .bento:hover::before{opacity:.9}
+    .bento::after{
+      content:""; position:absolute; inset:-8px; border-radius:inherit;
+      background:
+        radial-gradient(40% 60% at 30% 20%, rgba(197,21,23,.35), transparent 60%),
+        radial-gradient(40% 60% at 70% 80%, rgba(255,255,255,.15), transparent 60%);
+      filter:blur(14px); opacity:0; transition:opacity .25s ease; pointer-events:none;
+    }
+    .bento:hover::after{opacity:.30}
+    @media (prefers-reduced-motion: reduce){ .bento::before,.bento::after{transition:none} }
+
+    /* cards */
+    .grid{display:grid; grid-template-columns:1fr; gap:16px; margin:28px 0}
+    @media(min-width:800px){ .grid{grid-template-columns:1fr 1fr} }
+    .card{background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:20px; padding:20px; backdrop-filter:blur(6px)}
+    .card.bento{border:1px solid transparent} /* спрятали базовую рамку у бенто */
+    .card h3{margin:0 0 8px; font-size:20px}
+    .list{margin:8px 0 0; padding:0; list-style:none}
+    .list li{display:flex; gap:10px; padding:8px 0; border-bottom:1px dashed rgba(255,255,255,.12)}
+    .list li:last-child{border-bottom:none}
+    .k{color:var(--muted); min-width:120px}
+    .v{flex:1}
+
+    .card.alert{background:rgba(197,21,23,.12); border-color:var(--accent)}
+    .card.alert h3{color:#fff}
+
+    .countdown{display:flex; justify-content:center; gap:12px; margin-top:16px}
+    .t{background:var(--glass); border:1px solid rgba(255,255,255,.12); border-radius:14px; padding:10px 12px; min-width:74px; text-align:center}
+    .t b{display:block; font-size:20px}
+    .t span{font-size:12px; color:var(--muted)}
+
+    .snow{pointer-events:none; position:absolute; inset:0; overflow:hidden}
+    .flake{position:absolute; top:-10px; width:6px; height:6px; background:radial-gradient(#fff, rgba(255,255,255,.1)); border-radius:50%; opacity:.9; animation:fall linear infinite}
+    @keyframes fall{to{transform:translateY(110vh) translateX(var(--drift)); opacity:1}}
+
+    footer{margin:32px 0 12px; text-align:center; color:var(--muted); font-size:13px}
+    .note{font-size:13px; color:var(--muted)}
+    .divider{height:1px; background:linear-gradient(90deg, transparent, rgba(255,255,255,.2), transparent); margin:18px 0}
+    .map{border:0; width:100%; height:260px; border-radius:16px; box-shadow: inset 0 0 0 1px rgba(255,255,255,.08)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="snow" aria-hidden="true" id="snow"></div>
+      <div class="logo"><img src="assets/logo.svg" alt="Логотип компании" /></div>
+      <span class="badge">Зимний корпоратив • <b>нам 15 лет</b></span>
+      <h1>Приглашаем на зимний корпоратив</h1>
+      <div class="pill pill-date">13 декабря 2025</div>
+      <div class="countdown" id="countdown">
+        <div class="t"><b id="cd-d">0</b><span>дней</span></div>
+        <div class="t"><b id="cd-h">0</b><span>часов</span></div>
+        <div class="t"><b id="cd-m">0</b><span>мин</span></div>
+      </div>
+      <div class="cta">
+        <a class="btn" id="rsvpBtn" href="https://forms.yandex.ru/u/68ee4232493639ae8c96e85d" target="_blank" rel="noopener">Зарегистрироваться</a>
+      </div>
+      <p class="note" style="margin-top:8px">Пожалуйста, зарегистрируйтесь <b>до 1 ноября</b>, чтобы мы забронировали места. В этом году мы отмечаем <b>15-летие компании</b>.</p>
+    </header>
+
+    <section class="card" id="intro">
+      <h3>Дорогие коллеги!</h3>
+      <p>Приглашаем вас провести зимний день вместе в парк‑отеле «Яхрома». Нас ждут тёплые встречи, активные забавы и праздничный банкет. В этом году мы отмечаем <b style="color: var(--accent)">15 лет компании</b> — давайте отпразднуем юбилей большой командой!</p>
+    </section>
+
+    <section class="card" style="padding:16px">
+      <div class="img-row" style="display:grid; grid-template-columns:1fr; gap:12px">
+        <figure style="margin:0"><img src="assets/yakhroma-1.jpg" alt="Парк-отель Яхрома — вход" style="width:100%; height:320px; object-fit:cover; border-radius:12px;" /></figure>
+        <figure style="margin:0"><img src="assets/yakhroma-2.jpg" alt="Парк-отель Яхрома — территория" style="width:100%; height:320px; object-fit:cover; border-radius:12px;" /></figure>
+      </div>
+      <script>(function(){const mq=window.matchMedia('(min-width:800px)');const apply=()=>{const r=document.querySelector('.img-row');if(!r)return;r.style.gridTemplateColumns=mq.matches?'1fr 1fr':'1fr';};apply();mq.addEventListener?mq.addEventListener('change',apply):mq.addListener(apply);})();</script>
+    </section>
+
+    <section class="grid">
+      <article class="card bento">
+        <h3>Детали события</h3>
+        <ul class="list">
+          <li><span class="k">Дата</span><span class="v">Суббота, 13 декабря 2025</span></li>
+          <li><span class="k">Адрес</span><span class="v">Парк-отель «Яхрома», Московская область, Дмитровский городской округ, деревня Животино</span></li>
+          <li><span class="k">Возьмите<br>с собой</span><span class="v">Тёплая одежда и сменная одежда для банкета</span></li>
+          <li><span class="k">Алкоголь</span><span class="v">в ограниченном количестве; при желании можно дополнительно приобрести в баре</span></li>
+        </ul>
+      </article>
+      <aside class="card bento">
+        <h3>Корпоратив на карте</h3>
+        <iframe class="map" src="https://yandex.ru/map-widget/v1/?ll=37.475958%2C56.268447&z=14&pt=37.475958,56.268447,pm2rdm" title="Карта — Парк-отель Яхрома"></iframe>
+      </aside>
+    </section>
+
+    <section class="card bento">
+      <h3>Программа</h3>
+      <ul class="list">
+        <li><span class="k">09:00</span><span class="v">Сбор у офиса (ул. Авиамоторная, 12)</span></li>
+        <li><span class="k">09:30</span><span class="v">Отправление на трансфере</span></li>
+        <li><span class="k">12:00</span><span class="v">Прибытие в парк-отель, приветственный фуршет, глинтвейн, возможность переодеться и утеплиться</span></li>
+        <li><span class="k">13:00</span><span class="v">Время развлечений и зимних забав</span></li>
+        <li><span class="k">15:00</span><span class="v">Начало банкета, официальная часть, приветственное слово Генерального директора и руководителей отделов</span></li>
+        <li><span class="k">18:00</span><span class="v">Праздничный торт</span></li>
+        <li><span class="k">19:00</span><span class="v">Выезд из парк-отеля</span></li>
+        <li><span class="k">21:00</span><span class="v">Прибытие к офису (ул. Авиамоторная, 12)</span></li>
+      </ul>
+    </section>
+
+    <div class="cta cta-bottom">
+      <a class="btn" href="https://forms.yandex.ru/u/68ee4232493639ae8c96e85d" target="_blank" rel="noopener">Зарегистрироваться</a>
+    </div>
+
+    <section class="card alert">
+      <h3>Важно</h3>
+      <p class="note" style="color:#fff">Мест ограниченное число. Если планы изменились — пожалуйста, сообщите заранее.</p>
+    </section>
+
+    <section class="card" style="padding:16px; margin-top:32px">
+      <p class="note" style="margin:0">Если есть вопросы, обращайтесь в отдел по работе с персоналом.</p>
+    </section>
+
+    <footer><p>До встречи на корпоративе! • Команда организаторов</p></footer>
+  </div>
+
+  <script>
+    const target = new Date('2025-12-13T00:00:00');
+    const upd = ()=>{
+      const now=new Date(), diff=target-now;
+      const dEl=document.getElementById('cd-d'),hEl=document.getElementById('cd-h'),mEl=document.getElementById('cd-m');
+      if(diff<=0){dEl.textContent=hEl.textContent=mEl.textContent='0';return;}
+      dEl.textContent=Math.floor(diff/86400000);
+      hEl.textContent=Math.floor((diff%86400000)/3600000);
+      mEl.textContent=Math.floor((diff%3600000)/60000);
+    }; upd(); setInterval(upd,60000);
+
+    const snow=document.getElementById('snow');
+    const makeFlake=()=>{const f=document.createElement('div'); f.className='flake';
+      f.style.left=Math.random()*100+'vw'; f.style.opacity=(0.6+Math.random()*0.4).toFixed(2);
+      f.style.width=f.style.height=(3+Math.random()*5)+'px';
+      const duration=7+Math.random()*10; f.style.setProperty('--drift',(Math.random()*60-30)+'px'); f.style.animationDuration=duration+'s';
+      snow.appendChild(f); setTimeout(()=>f.remove(),duration*1000);
+    }; setInterval(()=>{for(let i=0;i<3;i++) makeFlake();},400);
+
+    // MAGIC BENTO spotlight
+    (function(){
+      const cards=document.querySelectorAll('.bento'); if(!cards.length) return;
+      const isMobile=()=>window.matchMedia('(max-width: 800px)').matches;
+      let enabled=!isMobile(); window.addEventListener('resize',()=>{enabled=!isMobile();});
+      const update=(e)=>{ if(!enabled) return;
+        cards.forEach(card=>{
+          const r=card.getBoundingClientRect();
+          const inside=e.clientX>=r.left&&e.clientX<=r.right&&e.clientY>=r.top&&e.clientY<=r.bottom;
+          const x=((e.clientX-r.left)/r.width)*100, y=((e.clientY-r.top)/r.height)*100;
+          card.style.setProperty('--glow-x',`${x}%`); card.style.setProperty('--glow-y',`${y}%`);
+          card.style.setProperty('--glow-intensity', inside ? '1' : '0.25');
+        });
+      };
+      document.addEventListener('pointermove', update);
+    })();
+  </script>
+</body>
+</html>
